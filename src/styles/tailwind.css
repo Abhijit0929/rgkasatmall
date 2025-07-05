@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #8B2635; /* deep-maroon */
+    --color-primary-50: #FDF2F4; /* very-light-maroon */
+    --color-primary-100: #FCE7EA; /* light-maroon */
+    --color-primary-200: #F8CDD4; /* medium-light-maroon */
+    --color-primary-300: #F2A3B3; /* medium-maroon */
+    --color-primary-400: #E97A92; /* medium-dark-maroon */
+    --color-primary-500: #D85171; /* dark-maroon */
+    --color-primary-600: #B83E56; /* darker-maroon */
+    --color-primary-700: #8B2635; /* deep-maroon */
+    --color-primary-800: #6B1E2A; /* very-dark-maroon */
+    --color-primary-900: #4A151D; /* darkest-maroon */
+    --color-primary-foreground: #FFFFFF; /* white */
+
+    /* Secondary Colors */
+    --color-secondary: #D4AF37; /* rich-gold */
+    --color-secondary-50: #FEFCF5; /* very-light-gold */
+    --color-secondary-100: #FDF8E8; /* light-gold */
+    --color-secondary-200: #FAF0CC; /* medium-light-gold */
+    --color-secondary-300: #F5E299; /* medium-gold */
+    --color-secondary-400: #EFD366; /* medium-dark-gold */
+    --color-secondary-500: #E9C446; /* dark-gold */
+    --color-secondary-600: #D4AF37; /* rich-gold */
+    --color-secondary-700: #B8962F; /* darker-gold */
+    --color-secondary-800: #8F7525; /* very-dark-gold */
+    --color-secondary-900: #66541B; /* darkest-gold */
+    --color-secondary-foreground: #2C1810; /* rich-dark-brown */
+
+    /* Accent Colors */
+    --color-accent: #2E8B57; /* forest-green */
+    --color-accent-50: #F0F9F4; /* very-light-green */
+    --color-accent-100: #DCF2E4; /* light-green */
+    --color-accent-200: #BBE5CA; /* medium-light-green */
+    --color-accent-300: #8DD3A5; /* medium-green */
+    --color-accent-400: #5FBF7E; /* medium-dark-green */
+    --color-accent-500: #3DA862; /* dark-green */
+    --color-accent-600: #2E8B57; /* forest-green */
+    --color-accent-700: #26734A; /* darker-green */
+    --color-accent-800: #1F5A3A; /* very-dark-green */
+    --color-accent-900: #17412A; /* darkest-green */
+    --color-accent-foreground: #FFFFFF; /* white */
+
+    /* Background Colors */
+    --color-background: #FEFCF8; /* warm-off-white */
+    --color-surface: #F8F6F0; /* subtle-cream */
+    --color-surface-50: #FEFCF8; /* warm-off-white */
+    --color-surface-100: #F8F6F0; /* subtle-cream */
+    --color-surface-200: #F2EFE7; /* light-cream */
+    --color-surface-300: #EBE7DD; /* medium-cream */
+    --color-surface-400: #E4DFD3; /* medium-dark-cream */
+    --color-surface-500: #DDD7C9; /* dark-cream */
+
+    /* Text Colors */
+    --color-text-primary: #2C1810; /* rich-dark-brown */
+    --color-text-secondary: #6B5B4F; /* medium-brown */
+    --color-text-muted: #8B7D71; /* light-brown */
+    --color-text-disabled: #A8A098; /* very-light-brown */
+
+    /* Status Colors */
+    --color-success: #22C55E; /* green-500 */
+    --color-success-50: #F0FDF4; /* green-50 */
+    --color-success-100: #DCFCE7; /* green-100 */
+    --color-success-500: #22C55E; /* green-500 */
+    --color-success-600: #16A34A; /* green-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-50: #FFFBEB; /* amber-50 */
+    --color-warning-100: #FEF3C7; /* amber-100 */
+    --color-warning-500: #F59E0B; /* amber-500 */
+    --color-warning-600: #D97706; /* amber-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+
+    --color-error: #DC2626; /* red-600 */
+    --color-error-50: #FEF2F2; /* red-50 */
+    --color-error-100: #FEE2E2; /* red-100 */
+    --color-error-500: #EF4444; /* red-500 */
+    --color-error-600: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+
+    /* Border Colors */
+    --color-border: rgba(107, 91, 79, 0.12); /* medium-brown-12 */
+    --color-border-light: rgba(107, 91, 79, 0.08); /* medium-brown-8 */
+    --color-border-strong: rgba(107, 91, 79, 0.24); /* medium-brown-24 */
+
+    /* Shadow Colors */
+    --color-shadow: rgba(44, 24, 16, 0.08); /* rich-dark-brown-8 */
+    --color-shadow-medium: rgba(44, 24, 16, 0.12); /* rich-dark-brown-12 */
+    --color-shadow-strong: rgba(44, 24, 16, 0.16); /* rich-dark-brown-16 */
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-caption: 'Source Sans Pro', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Spacing */
+    --header-height-desktop: 64px;
+    --header-height-mobile: 56px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .shadow-soft {
+    box-shadow: 0 1px 3px var(--color-shadow);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 4px 12px var(--color-shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: 0 8px 24px var(--color-shadow-strong);
+  }
+
+  .transition-smooth {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-layout {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
